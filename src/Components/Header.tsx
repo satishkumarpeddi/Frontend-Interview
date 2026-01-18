@@ -1,22 +1,43 @@
+import { useState } from "react";
 import { Button } from "./ui/button";
 const Header = () => {
+  const [toggle, setToggle] = useState(false);
   return (
     <div className="">
       <nav className="flex justify-between p-3 items-center ">
         <h1 className="uppercase font-bold">cm monk</h1>
-        <ul className="flex gap-x-4">
+
+        <ul
+          className={`fixed top-0 right-0 flex flex-col bg-red-500 items-end p-10 w-1/2 h-full gap-y-4
+transition-transform duration-500 md:relative md:flex-row md:bg-white md:justify-center md:gap-3 md:items-center md:p-0 md:w-auto md:h-auto
+${toggle ? "translate-x-0" : "translate-x-full"} md:translate-x-0 md:duration-initial`}
+        >
+          <Button
+            onClick={() => setToggle(false)}
+            className="top-0 absolute md:hidden right-0 font-bold text-2xl text-white cursor-pointer"
+          >
+            X
+          </Button>
           <li className="font-semibold  cursor-pointer">Tools</li>
           <li className="font-semibold  cursor-pointer">Practice</li>
           <li className="font-semibold  cursor-pointer">Events</li>
           <li className="font-semibold  cursor-pointer">Job Board</li>
           <li className="font-semibold  cursor-pointer">Points</li>
         </ul>
-        <Button
-          variant="secondary"
-          className="cursor-pointer outline-none bg-blue-500 hover:bg-blue-600 text-white"
-        >
-          Profile
-        </Button>
+        <div className="flex justify-center items-center gap-3">
+          <Button
+            variant="secondary"
+            className="cursor-pointer outline-none bg-blue-500 hover:bg-blue-600 text-white"
+          >
+            Profile
+          </Button>
+          <Button
+            onClick={() => setToggle(true)}
+            className="block cursor-pointer p-0 md:hidden font-bold text-2xl"
+          >
+            ☰
+          </Button>
+        </div>
       </nav>
       <div className="p-2">
         <hr />
