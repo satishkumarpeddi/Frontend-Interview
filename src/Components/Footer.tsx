@@ -40,7 +40,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="p-8">
+      <div className="p-6">
         <hr />
       </div>
       <div className="flex flex-col sm:flex-row justify-between p-8">
