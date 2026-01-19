@@ -3,11 +3,13 @@ import React from "react";
 const Footer = () => {
   return (
     <div className="bg-blue-300 text-amber-100">
-      <div className="flex flex-col md:flex-row p-8 w-full gap-3">
+      <div className="flex flex-col md:flex-row p-8 w-full gap-8">
         <div className="w-full md:w-[35%]">
           <div>
-            <h1 className="uppercase font-bold">ca monk</h1>
-            <p>
+            <h1 className="uppercase font-bold text-center md:text-left">
+              ca monk
+            </h1>
+            <p className="text-center md:text-left">
               Empowering the next generation of financial leaders with tools,
               community, and knowledge.
             </p>
