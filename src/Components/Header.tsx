@@ -10,7 +10,7 @@ const Header = () => {
         <ul
           className={`fixed top-0 right-0 flex flex-col bg-red-500 items-end p-10 w-1/2 h-full gap-y-4
 transition-transform duration-500 md:relative md:flex-row md:bg-white md:justify-center md:gap-3 md:items-center md:p-0 md:w-auto md:h-auto
-${toggle ? "translate-x-0" : "translate-x-full"} md:translate-x-0 md:duration-initial`}
+${toggle ? "translate-x-0" : "translate-x-full"}  md:translate-none md:duration-initial`}
         >
           <Button
             onClick={() => setToggle(false)}
@@ -18,11 +18,21 @@ ${toggle ? "translate-x-0" : "translate-x-full"} md:translate-x-0 md:duration-in
           >
             X
           </Button>
-          <li className="font-semibold  cursor-pointer">Tools</li>
-          <li className="font-semibold  cursor-pointer">Practice</li>
-          <li className="font-semibold  cursor-pointer">Events</li>
-          <li className="font-semibold  cursor-pointer">Job Board</li>
-          <li className="font-semibold  cursor-pointer">Points</li>
+          <li className="font-semibold text-white md:text-black cursor-pointer">
+            Tools
+          </li>
+          <li className="font-semibold text-white md:text-black cursor-pointer">
+            Practice
+          </li>
+          <li className="font-semibold text-white md:text-black cursor-pointer">
+            Events
+          </li>
+          <li className="font-semibold text-white md:text-black cursor-pointer">
+            Job Board
+          </li>
+          <li className="font-semibold text-white md:text-black cursor-pointer">
+            Points
+          </li>
         </ul>
         <div className="flex justify-center items-center gap-3">
           <Button

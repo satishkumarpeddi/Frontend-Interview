@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div>
+    <div className="bg-blue-300 text-amber-100">
       <div className="flex flex-col md:flex-row p-8 w-full gap-3">
         <div className="w-full md:w-[35%]">
           <div>
@@ -14,28 +14,28 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex flex-col gap-y-4 sm:flex-row md:gap-y-0 justify-between w-full md:w-[65%]">
-          <div className="flex flex-col  gap-y-4">
-            <h2 className="uppercase">resources</h2>
-            <ul>
-              <li>Blog</li>
-              <li>Webinars</li>
-              <li>Case Studies</li>
+          <div className="flex flex-col text-center md:text-left gap-y-4">
+            <h2 className="uppercase font-semibold">resources</h2>
+            <ul className="flex gap-x-3 justify-center text-center md:flex-col md:text-left">
+              <li className="cursor-pointer">Blog</li>
+              <li className="cursor-pointer">Webinars</li>
+              <li className="cursor-pointer">Case Studies</li>
             </ul>
           </div>
-          <div className="flex flex-col gap-y-4">
-            <h2 className="uppercase">platform</h2>
-            <ul>
-              <li>Job Board</li>
-              <li>Practice Tests</li>
-              <li>Mentorship</li>
+          <div className="flex flex-col text-center md:text-left gap-y-4">
+            <h2 className="uppercase font-semibold">platform</h2>
+            <ul className="flex gap-x-3 justify-center text-center md:flex-col md:text-left">
+              <li className="cursor-pointer">Job Board</li>
+              <li className="cursor-pointer">Practice Tests</li>
+              <li className="cursor-pointer">Mentorship</li>
             </ul>
           </div>
-          <div className="flex flex-col gap-y-4">
-            <h2 className="uppercase">connect</h2>
-            <ul>
-              <li>LinkedIn</li>
-              <li>Twitter</li>
-              <li>Instagram</li>
+          <div className="flex flex-col text-center md:text-left gap-y-4">
+            <h2 className="uppercase font-semibold">connect</h2>
+            <ul className="flex gap-x-3 justify-center text-center md:flex-col md:text-left">
+              <li className="cursor-pointer">LinkedIn</li>
+              <li className="cursor-pointer">Twitter</li>
+              <li className="cursor-pointer">Instagram</li>
             </ul>
           </div>
         </div>
