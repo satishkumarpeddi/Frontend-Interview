@@ -33,6 +33,7 @@ const BlogDetails = () => {
             <CardDescription>
               <img
                 src={data?.coverImage}
+                alt={data?.title || "Blog cover image"}
                 className="object-cover rounded-xl w-full md:h-2/5 h-auto flex m-auto"
               />
               {data!.descirption}
