@@ -1,11 +1,14 @@
 import { useState } from "react";
 import { Button } from "./ui/button";
+import { Link } from "react-router-dom";
 const Header = () => {
   const [toggle, setToggle] = useState(false);
   return (
     <div className="">
       <nav className="flex justify-between p-3 items-center ">
-        <h1 className="uppercase font-bold">cm monk</h1>
+        <Link to="/">
+          <h1 className="uppercase font-bold cursor-pointer">cm monk</h1>
+        </Link>
 
         <ul
           className={`fixed top-0 right-0 flex flex-col bg-red-500 items-end p-10 w-1/2 h-full gap-y-4

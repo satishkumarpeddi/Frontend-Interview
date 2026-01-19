@@ -1,5 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
-import { getBlogs } from "@/api/blogsApi";
+import { getBlogs } from "../api/blogsApi";
 import { Link } from "react-router-dom";
 import {
   Card,
@@ -18,8 +18,8 @@ const BlogList = () => {
   if (isLoading) return <p>Loading blogs...</p>;
   if (error) return <p>Failed to load blogs</p>;
   return (
-    <div>
-      <h2>All Blogs</h2>
+    <div className="w-full flex flex-col gap-y-4 ">
+      <h2 className="font-semibold text-2xl">All Blogs</h2>
       {data!.map((blog) => (
         <Card>
           <CardHeader>

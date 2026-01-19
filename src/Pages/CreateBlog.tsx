@@ -2,16 +2,23 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { createBlog } from "../api/blogsApi";
 import { useState } from "react";
 
-import { Card, CardContent, CardHeader, CardTitle } from "@/Components/ui/card";
-import { Button } from "@/Components/ui/button";
-import { Input } from "@/Components/ui/input";
-import { Textarea } from "@/Components/ui/textarea";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "../Components/ui/card";
+import { Button } from "../Components/ui/button";
+import { Input } from "../Components/ui/input";
+import { Textarea } from "../Components/ui/textarea";
 
 const CreateBlog = () => {
   const queryClient = useQueryClient();
 
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
+  const [descirption, setDescirption] = useState("");
+  const [coverImage, setCoverImage] = useState("");
   const [author, setAuthor] = useState("");
 
   const mutation = useMutation({
@@ -20,13 +27,14 @@ const CreateBlog = () => {
       queryClient.invalidateQueries({ queryKey: ["blogs"] });
       setTitle("");
       setContent("");
+      setDescirption("");
       setAuthor("");
     },
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    mutation.mutate({ title, content, author });
+    mutation.mutate({ title, content, descirption, coverImage, author });
   };
 
   return (
@@ -48,7 +56,14 @@ const CreateBlog = () => {
             value={author}
             onChange={(e) => setAuthor(e.target.value)}
           />
-
+          <Input
+            placeholder="Description"
+            onChange={(e) => setDescirption(e.target.value)}
+          />
+          <Input
+            placeholder="Image URL"
+            onChange={(e) => setCoverImage(e.target.value)}
+          />
           <Textarea
             placeholder="Content"
             value={content}
@@ -58,7 +73,7 @@ const CreateBlog = () => {
           <Button
             type="submit"
             disabled={mutation.isPending}
-            className="w-full"
+            className="w-full bg-blue-300 text-white cursor-pointer hover:bg-blue-400"
           >
             {mutation.isPending ? "Creating..." : "Create Blog"}
           </Button>

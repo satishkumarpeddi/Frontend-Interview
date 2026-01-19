@@ -3,6 +3,8 @@ const API_URL = "http://localhost:3001/blogs";
 export interface Blog {
   id?: number;
   title: string;
+  descirption: string;
+  coverImage: string;
   content: string;
   author: string;
 }
