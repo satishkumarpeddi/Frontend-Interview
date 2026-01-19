@@ -22,13 +22,13 @@ const BlogDetails = () => {
   if (isLoading) return <p>Loading blog...</p>;
   if (error) return <p>Error loading blog</p>;
   return (
-    <div className="flex w-full h-auto p-8 gap-5  sm:flex-col lg:flex-row">
+    <div className="flex w-full h-auto md:p-8 gap-5  flex-col lg:flex-row">
       <div className="w-full lg:w-[30%] overflow-y-scroll">
         <BlogList />
       </div>
       <div className="w-full lg:w-[70%]">
         <Card>
-          <CardHeader>
+          <CardHeader className="flex flex-col items-center">
             <CardTitle className="font-bold text-3xl">{data!.title}</CardTitle>
             <CardDescription>
               <img
@@ -38,7 +38,9 @@ const BlogDetails = () => {
               />
               {data!.descirption}
             </CardDescription>
-            <CardAction>{data!.author}</CardAction>
+            <CardAction className="font-semibold text-xl">
+              {data!.author}
+            </CardAction>
           </CardHeader>
           <CardContent className="text-left font-bold whitespace-break-spaces">
             {data!.content}

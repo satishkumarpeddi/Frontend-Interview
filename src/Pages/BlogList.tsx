@@ -22,10 +22,10 @@ const BlogList = () => {
       <h2 className="font-semibold text-2xl">All Blogs</h2>
       {data!.map((blog) => (
         <Card>
-          <CardHeader>
+          <CardHeader className="flex flex-col items-center">
             <CardTitle>{blog.title}</CardTitle>
             <CardDescription></CardDescription>
-            <CardAction>{blog.author}</CardAction>
+            <CardAction className="m-auto">{blog.author}</CardAction>
           </CardHeader>
           <CardContent></CardContent>
           <CardFooter>

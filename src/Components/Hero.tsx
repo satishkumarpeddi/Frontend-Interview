@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import BlogList from "../Pages/BlogList";
 import BlogDetails from "../Pages/BlogDetails";
 import CreateBlog from "../Pages/CreateBlog";
@@ -15,7 +15,7 @@ const Hero = () => {
   return (
     <div>
       {/**Top Section */}
-      <div className="text-center p-4 md:p-8 h-1/2 flex flex-col gap-y-5">
+      <div className="text-center p-4 md:p-8 gap-y-5">
         <h1 className="font-bold text-2xl whitespace-nowrap">CA Monk Blog</h1>
         <p className="font-serif">
           Stay updated with the latest trends in finance, accounting, and career
